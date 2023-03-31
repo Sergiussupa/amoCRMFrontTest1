@@ -5,7 +5,7 @@ const timerEl = document.querySelector('span');
 // Напишите реализацию createTimerAnimator
 // который будет анимировать timerEl
 const createTimerAnimator = () => {
-  return (seconds) => {};
+  return (seconds) => { };
 };
 
 const animateTimer = createTimerAnimator();
@@ -13,6 +13,7 @@ const animateTimer = createTimerAnimator();
 inputEl.addEventListener('input', () => {
   // Очистите input так, чтобы в значении
   // оставались только числа
+  inputEl.value = inputEl.value.replace(/[^0-9]/g, "");
 });
 
 buttonEl.addEventListener('click', () => {
